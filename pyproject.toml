@@ -1,0 +1,48 @@
+[project]
+name = "gdg-course-1141-3"
+version = "0.1.0"
+description = "FastAPI course query backend"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.129.0",
+    "uvicorn[standard]>=0.40.0",
+    "pydantic>=2.12.5",
+    "apscheduler>=3.11.2",
+    "httpx[http2]>=0.28.1",
+    "pip-system-certs>=5.3",
+    "colorama>=0.4.6",
+    "wcwidth>=0.6.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.0",
+]
+
+[project.scripts]
+backend = "backend.backend:main"
+animate = "animate:main"
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+
+exclude = ["__init__.py", ".env", ".venv", "*.ipynb"]
+fix = true
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    # conflict with formatter
+    "W191", "E111", "E114", "E117", "D206", "D300",
+    "Q000", "Q001", "Q002", "Q003", "COM812", "COM819", "ISC001",
+    "D",
+
+    "ARG001"
+]
+allowed-confusables = ["（", "）", "，", "！", "："]
+pylint.max-args = 6
+mccabe.max-complexity = 10
