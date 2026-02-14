@@ -9,8 +9,6 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.128+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Pydantic](https://img.shields.io/badge/Pydantic-2.12+-e92063?style=for-the-badge&logo=pydantic&logoColor=white)](https://pydantic.dev/)
 
-**English** | [繁體中文](README_zh-TW.md)
-
 </div>
 
 ## Overview
